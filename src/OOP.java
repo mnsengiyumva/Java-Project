@@ -12,9 +12,9 @@ import java.util.HashMap;
 
 class Brands{
 
-    String brandName;
-    String modelNumber;
-    int productionYear;
+    public String brandName;
+    public String modelNumber;
+    public int productionYear;
 
 
     public Brands(String name, String model, int year){
@@ -24,18 +24,18 @@ class Brands{
 
     }
 
-    String getBrandName(){
+    public String getBrandName(){
         return this.brandName;
     }
-    void setBrandName(String newName){
+    public void setBrandName(String newName){
         this.brandName = newName;
     }
 
-    void setProductionYear(int newYear){
+    public void setProductionYear(int newYear){
         this.productionYear = newYear;
     }
 
-    void writeNamesInFile(){
+    public void writeNamesInFile(){
         try{
 
             HashMap<String, String> namesAndModel = new HashMap<String, String>();
@@ -60,10 +60,18 @@ class Brands{
 }
 
 
+class Nike {
+
+}
+
 
 
 public class OOP{
+
     public static void main(String[] args){
+
+
+        Nike shoes = new Nike();
 
     }
 }
