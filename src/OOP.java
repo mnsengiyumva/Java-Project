@@ -10,14 +10,14 @@ import java.io.FileNotFoundException;
 import java.util.HashMap;
 
 
-class Brands{
+class Shoes{
 
     public String brandName;
     public String modelNumber;
     public int productionYear;
 
 
-    public Brands(String name, String model, int year){
+    public Shoes(String name, String model, int year){
         this.brandName = name;
         this.modelNumber = model;
         this.productionYear = year;
@@ -60,7 +60,13 @@ class Brands{
 }
 
 
-class Nike {
+class Nike extends Shoes {
+    int cost;
+
+    public Nike(String name, String model, int year, int cost){
+        super(name, model, year);
+        this.cost = cost;
+    }
 
 }
 
@@ -71,7 +77,11 @@ public class OOP{
     public static void main(String[] args){
 
 
-        Nike shoes = new Nike();
+        Nike nikeShoes = new Nike("AirMax", "AIR30021", 2020, 130);
+
+        System.out.println(nikeShoes.brandName);
+
+
 
     }
 }
