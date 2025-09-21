@@ -61,12 +61,16 @@ class Shoes{
 
 
 class Nike extends Shoes {
-    int cost;
+    int category;
 
-    public Nike(String name, String model, int year, int cost){
+    ArrayList<String> names = new ArrayList<String>();
+
+    public Nike(String name, String model, int year, int categoryType){
         super(name, model, year);
-        this.cost = cost;
+        this.category= categoryType;
     }
+
+
 
 }
 
