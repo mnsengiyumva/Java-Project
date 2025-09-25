@@ -15,12 +15,14 @@ class Shoes{
     public String brandName;
     public String modelNumber;
     public int productionYear;
+    int brandCost;
 
 
-    public Shoes(String name, String model, int year){
+    public Shoes(String name, String model, int year, int cost){
         this.brandName = name;
         this.modelNumber = model;
         this.productionYear = year;
+        this.brandCost = cost;
 
     }
 
@@ -33,6 +35,10 @@ class Shoes{
 
     public void setProductionYear(int newYear){
         this.productionYear = newYear;
+    }
+
+    public int getCost(){
+        return this.brandCost;
     }
 
     public void writeNamesInFile(){
@@ -59,16 +65,44 @@ class Shoes{
 
 }
 
+class Adidas extends Shoes{
+
+    String shoeName;
+
+    public Adidas(String name, String model, int year, int cost, String shoe){
+
+        super(name, model, year,cost);
+
+        this.shoeName =shoe;
+    }
+}
+
 
 class Nike extends Shoes {
     int category;
 
-    ArrayList<String> names = new ArrayList<String>();
 
-    public Nike(String name, String model, int year, int categoryType){
-        super(name, model, year);
+
+    ArrayList<String> names = new ArrayList<String>();
+    ArrayList<Integer> prices = new ArrayList<Integer>();
+
+    public Nike(String name, String model, int year, int cost, int categoryType){
+        super(name, model, year, cost);
         this.category= categoryType;
+
     }
+
+    public void brandNames(){
+        names.add(this.brandName);
+    }
+
+
+    public void nikePrices(){
+
+        this.prices.add(this.brandCost);
+
+    }
+
 
 
 
@@ -81,7 +115,14 @@ public class OOP{
     public static void main(String[] args){
 
 
-        Nike nikeShoes = new Nike("AirMax", "AIR30021", 2020, 130);
+        Nike nikeShoes = new Nike("AirMax", "AIR30021", 2020, 130, 250);
+
+        Adidas adidas1 = new Adidas("Samba", "sam222", 2023, 150, "Samba collections");
+
+
+        System.out.println(adidas1.getCost());
+        adidas1.setBrandName("Boots");
+        System.out.println((adidas1.getBrandName()));
 
         System.out.println(nikeShoes.brandName);
 
