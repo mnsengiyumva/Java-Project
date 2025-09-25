@@ -20,6 +20,12 @@ class Adidas extends Shoes{
 
         this.shoeName =shoe;
     }
+
+    public void costIncrement(int newPrice){
+        if (this.brandCost<100){
+            this.brandCost += newPrice;
+        }
+    }
 }
 
 
