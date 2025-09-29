@@ -1,4 +1,4 @@
-import java.io.DataOutput;
+import java.util.ArrayList;
 
 public class Invoice{
 
@@ -6,11 +6,15 @@ public class Invoice{
     private String customerName ;
 
     private double totalAmount;
+    private int clients;
+
+    ArrayList<String> customerNames = new ArrayList<>();
 
     public Invoice(String number, String name){
         invoiceNumber = number;
         customerName = name;
         totalAmount = 0.0;
+        clients = 0;
     }
 
     public void addItem(double price){
@@ -25,6 +29,22 @@ public class Invoice{
     }
 
     public String getCustomerName() {
+
+        clients += 1;
         return customerName;
+
+    }
+
+    public void trackInvoices(){
+
+        customerNames.add(customerName);
+
+
+
+
+    }
+
+    public ArrayList<String> getClients(){
+        return customerNames;
     }
 }
