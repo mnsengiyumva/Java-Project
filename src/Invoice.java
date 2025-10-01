@@ -8,7 +8,6 @@ public class Invoice{
     private double totalAmount;
     private int clients;
 
-    ArrayList<String> customerNames = new ArrayList<>();
 
     public Invoice(String number, String name){
         invoiceNumber = number;
@@ -34,19 +33,10 @@ public class Invoice{
         return customerName;
 
     }
-
-    public void trackInvoices(){
-
-        customerNames.add(customerName);
-
-
+    public void setCustomerName(String nextCustomer){
+        customerName = nextCustomer;
     }
 
-    public void getCustomerNames() {
-        System.out.println(customerNames);
-    }
 
-    public ArrayList<String> getClients(){
-        return customerNames;
-    }
+
 }
