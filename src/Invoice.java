@@ -42,6 +42,10 @@ public class Invoice{
 
     }
 
+    public void getCustomerNames() {
+        System.out.println(customerNames);
+    }
+
     public ArrayList<String> getClients(){
         return customerNames;
     }
