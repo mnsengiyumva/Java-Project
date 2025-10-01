@@ -9,6 +9,11 @@ public class Main{
 
         Invoice invoice1 = new Invoice("2001022", "Thomas");
         Invoice invoice2 = new Invoice("20034667", "Peter");
+        Invoice invoice3 = new Invoice("20382kke3", "Peterson");
+        Invoice invoice5 = new Invoice("20010RTH", "Thompson");
+        Invoice invoice6 = new Invoice("20034667", "Lucas");
+        Invoice invoice4= new Invoice("203BBER", "Ceasar");
+
 
 
         invoice1.addItem(5000.0);
@@ -26,6 +31,11 @@ public class Main{
 
         invoice2.printInvoice();
         invoice1.printInvoice();
+
+        invoice4.printInvoice();
+        invoice5.printInvoice();
+
+
 
 
 

@@ -40,8 +40,6 @@ public class Invoice{
         customerNames.add(customerName);
 
 
-
-
     }
 
     public ArrayList<String> getClients(){
