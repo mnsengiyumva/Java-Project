@@ -15,6 +15,7 @@ public class Main{
         Invoice invoice4= new Invoice("203BBER", "Ceasar");
 
         invoice2.setCustomerName("Kevin");
+        invoice1.setCustomerName("MOMO");
 
 
 
