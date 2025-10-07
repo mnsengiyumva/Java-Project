@@ -4,13 +4,17 @@ import java.util.Scanner;
 
 public class Guess{
 
-    String playerName;
-    int playerAge;
+    private String playerName;
+    private int playerAge;
+    private int computerGuess;
+    public int attempts = 10;
 
-    public Guess(String name, int age){
+
+    public Guess(String name, int age, int computer){
 
         this.playerName = name;
         this.playerAge = age;
+        this.computerGuess = computer;
 
     }
 
@@ -22,18 +26,39 @@ public class Guess{
         return this.playerName;
     }
 
+    public void setComputerGuess(int newComputerGuess) {
+        this.computerGuess = newComputerGuess;
+    }
 
+    public int getComputerGuess() {
+        return computerGuess;
+    }
+
+    public void play(){
+
+        while (this.attempts>0){
+            Scanner userGuess = new Scanner(System.in);
+
+            System.out.println("Guess the number between 1 and 100: ");
+            int guessedNumber = userGuess.nextInt();
+            if(guessedNumber < getComputerGuess()){
+                System.out.println("Too low. Try again later");
+            }
+
+        }
+
+    }
 
     public static void main(String[] args){
 
 
-        Guess player1 = new Guess("Thomas", 28);
+        Guess player1 = new Guess("Thomas", 28, 80);
         System.out.println("Welcome to the game"+player1.getPlayerName()+" Good luck!");
 
-        Scanner userGuess = new Scanner(System.in);
 
-        System.out.println("Guess the number between 1 and 100: ");
-        int guessedNumber = userGuess.nextInt();
+
+
+
 
 
 
