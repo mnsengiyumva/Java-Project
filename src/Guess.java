@@ -22,7 +22,15 @@ public class Guess{
         return this.playerName;
     }
 
+
+
     public static void main(String[] args){
+
+
+        Guess player1 = new Guess("Thomas", 28);
+        System.out.println("Welcome to the game"+player1.getPlayerName()+" Good luck!");
+
+
 
 
 
