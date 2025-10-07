@@ -30,6 +30,13 @@ public class Guess{
         Guess player1 = new Guess("Thomas", 28);
         System.out.println("Welcome to the game"+player1.getPlayerName()+" Good luck!");
 
+        Scanner userGuess = new Scanner(System.in);
+
+        System.out.println("Guess the number between 1 and 100: ");
+        int guessedNumber = userGuess.nextInt();
+
+
+
 
 
 
