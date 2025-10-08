@@ -41,8 +41,15 @@ public class Guess{
 
             System.out.println("Guess the number between 1 and 100: ");
             int guessedNumber = userGuess.nextInt();
-            if(guessedNumber < getComputerGuess()){
+            if(guessedNumber < getComputerGuess() && attempts>0){
                 System.out.println("Too low. Try again later");
+                attempts --;
+            }
+            else if(guessedNumber > getComputerGuess() && attempts>0) {
+
+                System.out.println("Too high. Try again later");
+                attempts --;
+
             }
 
         }
@@ -53,7 +60,8 @@ public class Guess{
 
 
         Guess player1 = new Guess("Thomas", 28, 80);
-        System.out.println("Welcome to the game"+player1.getPlayerName()+" Good luck!");
+        System.out.println("Welcome to the game "+player1.getPlayerName()+" Good luck!");
+        player1.play();
 
 
 
