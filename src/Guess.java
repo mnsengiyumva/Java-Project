@@ -53,7 +53,7 @@ public class Guess{
             }
             else if(guessedNumber == getComputerGuess() && attempts>0) {
 
-                System.out.println("Too high. Try again later");
+                System.out.println("Congratulations You won your guess is "+guessedNumber+" computer guess "+computerGuess+". Try again later");
                 break;
 
             }
@@ -61,6 +61,7 @@ public class Guess{
 
                 System.out.println("You lost, the number is "+computerGuess+". You run out of attempts. See you again");
                 attempts --;
+                break;
 
             }
 
