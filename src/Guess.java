@@ -59,7 +59,7 @@ public class Guess{
             }
             else if(attempts<0) {
 
-                System.out.println("You lost. You run out of attempts. See you again");
+                System.out.println("You lost, the number is "+computerGuess+". You run out of attempts. See you again");
                 attempts --;
 
             }
