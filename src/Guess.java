@@ -51,6 +51,19 @@ public class Guess{
                 attempts --;
 
             }
+            else if(guessedNumber == getComputerGuess() && attempts>0) {
+
+                System.out.println("Too high. Try again later");
+                break;
+
+            }
+            else if(attempts<0) {
+
+                System.out.println("You lost. You run out of attempts. See you again");
+                attempts --;
+
+            }
+
 
         }
 
