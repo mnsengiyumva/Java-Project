@@ -39,20 +39,20 @@ public class Guess{
     public void play(){
 
         while (this.attempts>0){
+            Scanner currentPlayer = new Scanner(System.in);
+
+            System.out.println("Welcome to the game");
+            System.out.print("Who is playing: ");
+            String player = currentPlayer.nextLine();
+            System.out.println("Welcome to the game "+player+" Good luck!");
 
             for (int i = 0; i<=numberOfPlayers; i++) {
 
-                Scanner currentPlayer = new Scanner(System.in);
-
-                System.out.println("Welcome to the game");
-                System.out.print("Who is playing: ");
-                String player = currentPlayer.nextLine();
-
-                System.out.println("Welcome to the game "+player+" Good luck!");
 
                 Scanner userGuess = new Scanner(System.in);
 
                 System.out.print(player+" Guess the number between 1 and 100: ");
+
                 int guessedNumber = userGuess.nextInt();
 
                 if (guessedNumber < getComputerGuess() && attempts > 0) {
