@@ -58,16 +58,16 @@ public class Guess{
                 if (guessedNumber < getComputerGuess() && attempts > 0) {
                     System.out.println("Too low. Try again later");
                     attempts--;
-                    continue;
+
                 } else if (guessedNumber > getComputerGuess() && attempts > 0) {
 
                     System.out.println("Too high. Try again later");
                     attempts--;
-                    continue;
 
                 } else if (guessedNumber == getComputerGuess() && attempts > 0) {
 
-                    System.out.println("Congratulations You won your guess is " + guessedNumber + " computer guess " + computerGuess + ". Try again later");
+                    System.out.println("Congratulations You won your guess is " + guessedNumber + " computer guess " + computerGuess);
+                    System.out.println("Let's see how other players will do");
                     break;
 
                 } else if (attempts < 0) {
@@ -91,11 +91,7 @@ public class Guess{
         Guess player1 = new Guess("Thomas", 28, 80, 5);
         player1.play();
 
-
-
-
     }
-
 
 
 
