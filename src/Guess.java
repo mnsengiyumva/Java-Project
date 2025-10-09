@@ -44,6 +44,12 @@ public class Guess{
 
                 Scanner currentPlayer = new Scanner(System.in);
 
+                System.out.println("Welcome to the game");
+                System.out.print("Who is playing: ");
+                String player = currentPlayer.nextLine();
+
+                System.out.println("Welcome to the game "+player+" Good luck!");
+
                 Scanner userGuess = new Scanner(System.in);
 
                 System.out.println("Guess the number between 1 and 100: ");
