@@ -42,6 +42,8 @@ public class Guess{
 
             for (int i = 0; i<=numberOfPlayers; i++) {
 
+                Scanner currentPlayer = new Scanner(System.in);
+
                 Scanner userGuess = new Scanner(System.in);
 
                 System.out.println("Guess the number between 1 and 100: ");
