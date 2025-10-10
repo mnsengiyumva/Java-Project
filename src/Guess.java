@@ -62,12 +62,6 @@ public class Guess{
                 numberOfPlayers --;
 
 
-//                Scanner userGuess = new Scanner(System.in);
-//
-//                System.out.print(player+" Guess the number between 1 and 100: ");
-//
-//                int guessedNumber = userGuess.nextInt();
-
                 if (guessedNumber < getComputerGuess() && attempts > 0) {
                     System.out.println("Too low. Try again later");
                     attempts--;
@@ -106,15 +100,6 @@ public class Guess{
 
     public static HashMap<String, Integer> getScores() {
         return playersScores;
-    }
-
-    public static void main(String[] args){
-
-
-        Guess player1 = new Guess("Thomas", 28, 80, 2);
-        player1.play();
-        System.out.println(getScores());
-
     }
 
 
