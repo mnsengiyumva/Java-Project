@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.HashMap;
 
@@ -100,6 +101,12 @@ public class Guess{
 
     public static HashMap<String, Integer> getScores() {
         return playersScores;
+    }
+
+    public void winner(){
+
+        ArrayList<Integer> winnersScores = new ArrayList<>(playersScores.values());
+
     }
 
 
