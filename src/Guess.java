@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.HashMap;
 
 
 
@@ -9,6 +10,10 @@ public class Guess{
     private int computerGuess;
     public int attempts = 10;
     private int numberOfPlayers;
+
+    private HashMap<String, Integer> playersScores = new HashMap<>();
+
+    private int scores = 10;
 
 
     public Guess(String name, int age, int computer, int players){
@@ -58,15 +63,19 @@ public class Guess{
                 if (guessedNumber < getComputerGuess() && attempts > 0) {
                     System.out.println("Too low. Try again later");
                     attempts--;
+                    scores --;
 
                 } else if (guessedNumber > getComputerGuess() && attempts > 0) {
 
                     System.out.println("Too high. Try again later");
                     attempts--;
+                    scores --;
 
                 } else if (guessedNumber == getComputerGuess() && attempts > 0) {
 
-                    System.out.println("Congratulations You won your guess is " + guessedNumber + " computer guess " + computerGuess);
+                    System.out.println("Congratulations You won your guess is: " + guessedNumber + " and computer guess is: " + computerGuess);
+                    System.out.println(player+ "scored: "+scores);
+                    playersScores.put(player, scores);
                     System.out.println("Let's see how other players will do");
                     break;
 
@@ -83,6 +92,10 @@ public class Guess{
 
         }
 
+    }
+
+    public HashMap<String, Integer> getScores() {
+        return playersScores;
     }
 
     public static void main(String[] args){
