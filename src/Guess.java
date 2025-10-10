@@ -11,7 +11,7 @@ public class Guess{
     public int attempts = 10;
     private int numberOfPlayers;
 
-    private HashMap<String, Integer> playersScores = new HashMap<>();
+    private static HashMap<String, Integer> playersScores = new HashMap<>();
 
     private int scores = 10;
 
@@ -94,7 +94,7 @@ public class Guess{
 
     }
 
-    public HashMap<String, Integer> getScores() {
+    public static HashMap<String, Integer> getScores() {
         return playersScores;
     }
 
@@ -103,6 +103,7 @@ public class Guess{
 
         Guess player1 = new Guess("Thomas", 28, 80, 5);
         player1.play();
+        System.out.println(getScores());
 
     }
 
