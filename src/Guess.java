@@ -43,7 +43,7 @@ public class Guess{
 
     public void play(){
 
-        while (this.attempts>0){
+        while (this.attempts>0 &&numberOfPlayers>0){
             Scanner currentPlayer = new Scanner(System.in);
 
             System.out.println("Welcome to the game");
@@ -51,14 +51,22 @@ public class Guess{
             String player = currentPlayer.nextLine();
             System.out.println("Welcome to the game "+player+" Good luck!");
 
+            Scanner userGuess = new Scanner(System.in);
+
+            System.out.print(player+" Guess the number between 1 and 100: ");
+
+            int guessedNumber = userGuess.nextInt();
+
             for (int i = 0; i<=numberOfPlayers; i++) {
 
+                numberOfPlayers --;
 
-                Scanner userGuess = new Scanner(System.in);
 
-                System.out.print(player+" Guess the number between 1 and 100: ");
-
-                int guessedNumber = userGuess.nextInt();
+//                Scanner userGuess = new Scanner(System.in);
+//
+//                System.out.print(player+" Guess the number between 1 and 100: ");
+//
+//                int guessedNumber = userGuess.nextInt();
 
                 if (guessedNumber < getComputerGuess() && attempts > 0) {
                     System.out.println("Too low. Try again later");
@@ -76,16 +84,18 @@ public class Guess{
                     System.out.println("Congratulations You won your guess is: " + guessedNumber + " and computer guess is: " + computerGuess);
                     System.out.println(player+ "scored: "+scores);
                     playersScores.put(player, scores);
-                    System.out.println("Let's see how other players will do");
-                    break;
 
-                } else if (attempts < 0) {
-
-                    System.out.println("You lost, the number is " + computerGuess + ". You run out of attempts. See you again");
-                    attempts--;
                     break;
 
                 }
+                if (attempts < 0) {
+
+                    System.out.println("You lost, the number is " + computerGuess + ". You run out of attempts. See you again");
+                    break;
+
+                }
+
+
 
             }
 
@@ -101,7 +111,7 @@ public class Guess{
     public static void main(String[] args){
 
 
-        Guess player1 = new Guess("Thomas", 28, 80, 5);
+        Guess player1 = new Guess("Thomas", 28, 80, 2);
         player1.play();
         System.out.println(getScores());
 
