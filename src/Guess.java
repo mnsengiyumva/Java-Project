@@ -51,7 +51,6 @@ public class Guess{
         String player = currentPlayer.nextLine();
 
 
-
         while (attempts>0) {
 
             Scanner userGuess = new Scanner(System.in);
