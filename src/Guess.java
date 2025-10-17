@@ -59,7 +59,7 @@ public class Guess{
 
             int guessedNumber = userGuess.nextInt();
 
-            attempts -- ;
+            attempts --;
 
 
             if (guessedNumber < getComputerGuess() && attempts > 0) {
