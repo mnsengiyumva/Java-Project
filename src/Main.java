@@ -40,11 +40,39 @@ public class Main{
 //
 //        invoice4.printInvoice();
 //        invoice5.printInvoice();
+        int n = 0;
+        int[][] arr = {{1,23}, {3, 8, 9}};
+        for (int k = 0; k< arr.length; k++){{
 
-        Guess player = new Guess("MICO", 22, 70);
-        player.play();
+            n = arr[k].length+arr.length;
+
+        }
+
+        System.out.println(n);
 
 
+
+        }
+
+
+
+
+//        Guess player = new Guess("MICO", 22, 70);
+//        player.play();
+//
+
+
+
+
+
+
+
+    }
+
+    public static class Player{
+
+        private String name;
+        private String playerID;
 
 
 
