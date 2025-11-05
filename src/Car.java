@@ -38,6 +38,11 @@ public class Car{
 
     }
 
+    public void setProductionYear(int newYear){
+
+        this.carCost = newYear;
+    }
+
     public String getCarNames(){
         return this.carName;
     }
@@ -46,6 +51,11 @@ public class Car{
         this.allCars.add(this.carName);
         return this.allCars;
     }
+
+    /*** returns a dictionary of car names and the year they were produced
+     *
+     * @return a hashmap
+     */
 
     public HashMap<String, Integer> getCarNamesAndYear(){
         this.carNamesAndYear.put(this.carName, this.productionYear);
@@ -65,8 +75,16 @@ public class Car{
 
         return this.luxuryCars;
 
-
     }
+
+    public boolean isLuxuryCar(){
+
+        if (this.carCost >20000 && this.productionYear >=2020){
+            return true;
+        }
+        return false;
+    }
+
 
 
 
