@@ -99,7 +99,6 @@ public class Car{
         }
 
         return this.luxuryCars;
-
     }
 
     public boolean isLuxuryCar(){
@@ -110,5 +109,5 @@ public class Car{
         return false;
     }
 
-
 }
+
